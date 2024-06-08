@@ -1,41 +1,60 @@
 <!DOCTYPE html>
-
+<!--Balise qui définit la langue du document-->
 <html lang="en">
+  <!-----Head du document, définit les métadonnées et ne sera pas affiché sur la page----->
   <head>
+    <!--Elément qui détermine les caractères utilisés dans le document, ici le choix de l'UTF-8 permet d'être le plus universel possible-->
     <meta charset="UTF-8" />
+    <!--Elément qui permet à la page de s'adapter automatiquement à la taille de la fenêtre de navigation-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Lien vers la feuille de style CSS-->
     <link rel="stylesheet" href="style.css" />
+    <!-- Favicône qui apparaît dans le navigateur de l'utilisateur.ice à côté du nom de l'onglet -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <!--Balises et liens permettant d'utiliser la police d'écriture choisie-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <!--Titre de la page-->
     <title>Frontend Mentor | QR code component</title>
   </head>
 
+  <!-----Corps du document, ce qui apparaîtra sur la page----->
   <body>
-    <div class="qr-container">
-      <img
-        class="qr-code"
-        src="./images/image-qr-code.png"
-        alt="Image of the QR code"
-      />
-      <p>Improve your front-end skills by building projects</p>
-      <p>
-        Scan the QR code to visit Frontend Mentor and take your coding skills to
-        the next level
-      </p>
-    </div>
-
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="www.linkedin.com/in/ninon-commarieu">Ninon Commarieu</a>.
-    </div>
+    <!---Partie principale, centrale du document--->
+    <main>
+      <!--Section qui va me permettre d'encadrer le QR code et le texte qui lui est associé-->
+      <section class="qr-container">
+        <!--Image du QR code-->
+        <img
+          class="qr-code"
+          src="./images/image-qr-code.png"
+          alt="Image of the QR code"
+        />
+        <!--Balise de titre de niveau 1-->
+        <h1>Improve your front-end skills by building projects</h1>
+        <!--Balise qui définit un paragraphe-->
+        <p>
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </section>
+    </main>
+    <!---Pied de page--->
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >, coded by
+      <a href="www.linkedin.com/in/ninon-commarieu">Ninon Commarieu</a>.
+    </footer>
   </body>
 </html>
