@@ -1,11 +1,6 @@
-/* # Front-end Style Guide
-
-
-### Font
-
-- Weights: 400, 700 */
-
 /****** Propriétés CSS globales ***********/
+
+/* Couleurs utilisées */
 :root {
   --White: hsl(0, 0%, 100%);
   --Gray: hsl(212, 45%, 89%);
@@ -13,34 +8,99 @@
   --Blue: hsl(218, 44%, 22%);
 }
 
+/****** Propriétés CSS par élément ***********/
+
+/* Propriétés générales de la page */
+body {
+  background-color: var(--Gray);
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Mise en place de Flexbox dans Main pour contrôler l'emplacement du contenu */
+main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Création de la carte autour du QR code et mise en forme*/
 .qr-container {
-
+  width: 20rem;
+  height: auto;
+  background-color: var(--White);
+  border-radius: 1.25rem;
+  filter: drop-shadow(0 1.56rem 1.56rem 0 rgba(0, 0, 0, 0.1));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.3rem 1.3rem 1rem 1.3rem;
 }
 
+/* Redimensionnement de l'image du QR code */
 .qr-code {
-
+  border-radius: 0.63rem;
+  align-items: center;
 }
 
+/* Mise en page du titre du QR code */
 h1 {
-font-weight: 700;
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--Blue);
+  text-align: center;
+  margin: 1.8rem 1rem 0 1rem;
 }
 
+/* Mise en page du bref paragraphe */
 p {
-font-size: 0.9rem;
-font-weight: 400;
+  font-size: 0.94rem;
+  font-weight: 400;
+  color: var(--Grayish);
+  text-align: center;
+  margin: 1.5rem 1.7rem 2rem 1.7rem;
 }
 
-.footer {
-  font-size: 0.68rem;
+/* Mise en forme du pied de page */
+footer {
+  font-size: 0.8rem;
   text-align: center;
 }
-.footer a {
+
+/* Mise en forme des liens */
+a {
+  color: var(--Grayish);
+  text-decoration: none;
+}
+
+/* Couleur du lien au survol */
+a:hover {
   color: var(--Blue);
 }
 
-/****** Media queries ***********/
-
-/********** Medium devices (tablets, less/equal than 1024px) *********/
+/****** Version mobile : résolution inférieure ou égale à 768px *********/
 
 @media screen and (max-width: 768px) {
+  /* Redimensionnement de la carte */
+  .qr-container {
+    width: 15rem;
+    padding: 1rem;
+  }
+
+  /* Ajustement de la mise en forme du titre pour plus de lisibilité */
+  h1 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0.5rem 0 0.5rem;
+  }
+
+  /* Ajustement de la mise en forme du paragraphe pour plus de lisibilité */
+  p {
+    font-size: 0.9rem;
+    margin: 1.2rem 0.5rem 1.5rem 0.5rem;
+  }
 }
